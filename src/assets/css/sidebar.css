@@ -1,0 +1,302 @@
+ul.sidebar-menu li ul.sub-menu a {
+  padding-left: 25px;
+}
+
+/*sidebar navigation*/
+
+#sidebar {
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  background: #0e151b;
+  overflow-y: scroll;
+}
+
+#sidebar ul li {
+  position: relative;
+}
+
+#sidebar .sub-menu > .sub li {
+  padding-left: 32px;
+}
+
+#sidebar .sub-menu > .sub li:last-child {
+  padding-bottom: 10px;
+}
+
+/*LEFT NAVIGATION ICON*/
+.dcjq-icon {
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background: url(../img/nav-expand.png) no-repeat top;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.active .dcjq-icon,
+ul.sidebar-menu li a:hover .dcjq-icon {
+  background: url(../img/nav-expand.png) no-repeat bottom;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/*---*/
+
+.nav-collapse.collapse {
+  display: inline;
+}
+
+.sidebar-menu {
+  overflow: auto;
+  height: 90%;
+}
+
+ul.sidebar-menu,
+ul.sidebar-menu li ul.sub {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+#sidebar > ul > li > ul.sub {
+  display: none;
+}
+
+#sidebar > ul > li.active > ul.sub,
+#sidebar > ul > li > ul.sub > li > a {
+  display: block;
+}
+
+ul.sidebar-menu li ul.sub li {
+  background: #ffef98;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul.sidebar-menu li ul.sub li:last-child {
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+ul.sidebar-menu li ul.sub li a {
+  font-size: 12px;
+  padding: 6px 0;
+  line-height: 35px;
+  height: 35px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #828282;
+}
+
+ul.sidebar-menu li ul.sub li a:hover,
+ul.sidebar-menu li ul.sub li.active a {
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+ul.sidebar-menu li {
+  margin: 0px 0px 2px 0px;
+}
+
+ul.sidebar-menu li.sub-menu {
+  line-height: 15px;
+}
+
+ul.sidebar-menu li a span {
+  display: inline-block;
+}
+
+ul.sidebar-menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 0 15px 55px;
+  font-size: 14px;
+  font-family: Montserrat, "Playfair Display";
+  font-weight: 500;
+  color: #fff;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#sidebar .logout_bottom {
+  bottom: 0;
+  display: block;
+  position: fixed;
+  height: 7%;
+  width: 210px;
+  background: #000000c2;
+  margin: 0;
+}
+#sidebar .logout_bottom a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 0 15px 55px;
+  font-size: 14px;
+  font-family: Montserrat, Playfair Display;
+  font-weight: 500;
+  color: #fff;
+  outline: none;
+}
+#sidebar .logout_bottom a .sidebar-menu-icon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  left: 25px;
+}
+
+#sidebar .logout_bottom a.active .sidebar-menu-icon,
+#sidebar .logout_bottom a:hover .sidebar-menu-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#sidebar .logout_bottom a.active,
+#sidebar .logout_bottom a:hover,
+#sidebar .logout_bottom a:focus {
+  font-weight: 600;
+  background: #fff;
+  color: #257ed4;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a.active,
+ul.sidebar-menu li a:hover,
+ul.sidebar-menu li a:focus {
+  font-weight: 600;
+  background: #fff;
+  color: #ea0000;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a i {
+  font-size: 15px;
+  padding-right: 6px;
+}
+
+ul.sidebar-menu li a:hover i,
+ul.sidebar-menu li a:focus i {
+  color: #ff6c60;
+}
+
+ul.sidebar-menu li a.active i {
+  color: #000;
+}
+
+ul.sidebar-menu li ul.sub-menu li {
+  margin: 3px 0px 0px 0px;
+}
+
+ul.sidebar-menu li ul.sub-menu li a:hover {
+  background: #0ead7c;
+  color: #fff;
+  border-radius: 4px;
+}
+
+ul.sidebar-menu li ul.sub-menu li.show.active {
+  background: #0ead7c;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.sidebar-toggle-box {
+  color: #797a7c;
+}
+
+ul.sidebar-menu {
+  margin-top: 2px;
+  float: left;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+ul.sidebar-menu li a .sidebar-menu-icon {
+  /* background: url(../img/dashboard_icon.png) no-repeat; */
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  left: 25px;
+  /* top: 12px; */
+}
+
+ul.sidebar-menu li a.active .sidebar-menu-icon,
+ul.sidebar-menu li a:hover .sidebar-menu-icon {
+  /* background: url(../img/dashboard_icon_hover.png) no-repeat; */
+  width: 20px;
+  height: 20px;
+}
+
+/*--sidebar toggle---*/
+
+.sidebar-toggle-box {
+  float: left;
+  padding-right: 15px;
+  margin-top: 20px;
+  display: none;
+}
+
+.sidebar-toggle-box .fa-bars {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.sidebar-closed > #sidebar > ul {
+  display: none;
+}
+
+.sidebar-closed #main-content {
+  margin-left: 0px;
+}
+
+.sidebar-closed #sidebar {
+  margin-left: -210px;
+}
+
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: #ffffff; /* color of the tracking area */
+}
+
+.sidebar-menu::-webkit-scrollbar-button {
+  height: 2px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background-color: #257ed4; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid #ffffff; /* creates padding around scroll thumb */
+}

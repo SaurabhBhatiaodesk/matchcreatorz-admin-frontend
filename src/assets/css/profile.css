@@ -1,0 +1,32 @@
+.profile-img-container {
+  height: 154px;
+  width: 154px;
+  display: block;
+  background-color: lightgray;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.profile-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.document-img-container {
+  height: 184px;
+  width: 184px;
+  display: block;
+  background-color: lightgray;
+  padding: 3px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.doc-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}

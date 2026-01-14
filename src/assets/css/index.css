@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import url(bootstrap-reset.css);
+@import url(bootstrap.css);
+@import url(bootstrap.min.css);
+@import url(custom.css);
+/* @import url(gallery.css);
+@import url(gallery_popup.css);
+@import url(image-crop.css);
+@import url(invoice-print.css);
+@import url(jquery.steps.css);
+@import url(navbar-fixed-top.css);
+@import url(owl.carousel.css); */
+@import url(semantic.min.css);
+/* @import url(slidebars.css);
+@import url(soon.css); */
+@import url(sidebar.css);
+@import url(style-responsive.css);
+@import url(style.css);
+/* @import url(table-responsive.css);
+@import url(tasks.css);
+@import url(unique-visits.css);
+@import url(yamm.css);
+@import url(font-awesome.css);
+@import url(font-awesome.min.css); */
+@import url(profile.css);
+@import url(confirm-dialog.css);
+@import url(loader.css);
+@import url(settings.css);
+
+#app {
+  height: 100vh;
+}
+
+.ck-editor__editable {
+  min-height: 40vh;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #257ed4;  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #257ed4;  /* creates padding around scroll thumb */
+}
+

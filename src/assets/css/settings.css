@@ -1,0 +1,23 @@
+.list-scroll {
+  max-height: 120px;
+  overflow-y: scroll;
+  border: 0.2px solid lightgray;
+}
+
+.list-scroll::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+.list-scroll::-webkit-scrollbar-track {
+  background: #ffffff; /* color of the tracking area */
+}
+
+.list-scroll::-webkit-scrollbar-button {
+  height: 2px;
+}
+
+.list-scroll::-webkit-scrollbar-thumb {
+  background-color: #257ed4; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid #ffffff; /* creates padding around scroll thumb */
+}
