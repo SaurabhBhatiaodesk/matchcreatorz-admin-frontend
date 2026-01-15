@@ -1,0 +1,50 @@
+name: Deploy Admin Frontend Application
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 🚀 Deploy source code only (no node_modules, no build, no env)
+      - name: Deploy admin frontend via Rsync
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_LIVE }}
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          TARGET: /home/ubuntu/Matchcreators-Admin/
+          ARGS: >
+            -rlgoDzvc --delete
+            --exclude=node_modules
+            --exclude=.git
+            --exclude=.env
+            --exclude=build
+          BEFORE_RSYNC: echo "🚀 Deploying admin frontend source code..."
+          AFTER_RSYNC: echo "✅ Source code deployed successfully!"
+
+      # 🔨 Build & restart on server
+      - name: Build & Restart on Server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY_LIVE }}
+          script: |
+            cd /home/ubuntu/Matchcreators-Admin/
+            echo "📦 Installing dependencies via yarn..."
+            yarn install --frozen-lockfile
+            echo "🔨 Building frontend..."
+            yarn build
+            echo "🔄 Restarting PM2 process..."
+            pm2 reload matchcreators-admin || pm2 start "yarn preview" --name matchcreators-admin
+            pm2 save
+            echo "✅ Admin frontend deployed, built & restarted successfully!"
